@@ -1,0 +1,414 @@
+@use "../helpers/style"as *;
+@use "../mixins/style"as *;
+@use "../helpers/global-root"as *;
+@use "../helpers/fonts"as *;
+@use "../mixins/media-quary"as *;
+
+.header {
+    position: relative;
+    font-family: $bs-font-sans-serif;
+
+    .nav {
+        padding: 0px 100px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        position: fixed; // استخدام position: fixed فقط
+        width: 100%;
+        z-index: 999;
+
+        .list {
+            @extend %flex;
+            width: 50%;
+            height: 50px;
+
+            .listLi {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: $main-color;
+                    font-size: 18px;
+                }
+            }
+
+        }
+
+
+
+        .icon {
+            display: none;
+        }
+    }
+
+    .dropList {
+        display: none;
+    }
+
+    .content {
+        @include flex(row);
+        padding: 0px 100px;
+        background: contint-color;
+
+        .title {
+            position: absolute;
+            padding: 0px 100px;
+            z-index: 2;
+            left: -20vw;
+            opacity: 0;
+            width: 50%;
+            transition: all 1s ease-in-out;
+
+            h1 {
+                font-size: 88px;
+                font-weight: bold;
+                line-height: 90px;
+                word-spacing: 2px;
+            }
+
+            p {
+                margin-top: -50px;
+                font-size: 21px;
+                color: $main-color;
+                line-height: 37px;
+            }
+
+            .btn {
+                width: 190px;
+                background: $btn-color;
+                color: white;
+                @extend %flex;
+                justify-content: center;
+                padding: 20px 0px;
+                border: none;
+                font-size: 16px;
+                letter-spacing: 1px;
+                cursor: pointer;
+                margin-top: 67px;
+                box-shadow: 0 3rem 4rem rgba(21, 21, 21, .25) !important;
+
+                &:hover {
+                    background: darken($btn-color, 10%);
+                    transform: translateY(-5px);
+                    box-shadow: 0 5rem 6rem rgba(21, 21, 21, 0.35);
+                }
+            }
+        }
+
+        .image {
+            @include background-image("https://stride-html-template.netlify.app/img/webp/interior11.webp", cover, center);
+            width: 68%;
+            height: 650px;
+            margin-left: auto;
+            position: relative;
+            right: -20vw;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+        }
+
+        .image2 {
+            display: none;
+        }
+    }
+
+    @include media(large) {
+        .nav {
+
+
+            .list {
+                width: 60%;
+            }
+
+
+        }
+
+
+    }
+
+    @include media(custom976) {
+        .nav {
+
+
+            .list {
+                width: 60%;
+            }
+
+
+        }
+
+
+    }
+
+    @include media(medium) {
+        .nav {
+padding: 0px 40px;
+            .list {
+                width: 68%;
+            }
+
+
+        }
+    }
+
+
+    @include media(small) {
+        .nav {
+            padding: 0px 20px;
+
+            .list {
+                display: none;
+            }
+
+            .icon {
+                display: block;
+                position: absolute;
+                right: 70px;
+                cursor: pointer;
+                // margin-right: -50px;
+            }
+        }
+
+        .dropList {
+            display: none;
+            position: absolute;
+            z-index: 10000;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 30px;
+            margin-top: 50px;
+            transition: all 0.3s ease-in-out;
+
+            .dropLi {
+                list-style: none;
+                margin: 5px 0;
+                font-weight: bold;
+
+
+                a {
+                    text-decoration: none;
+                    color: $main-color;
+                    font-size: 18px;
+                }
+
+            }
+
+            .close {
+                width: 100%;
+                text-align: right;
+
+
+            }
+
+            .closeIcon {
+                margin-right: 35px;
+                margin-top: 15px;
+            }
+
+        }
+
+        .content {
+            padding: 0px 20px;
+
+            .title {
+                h1 {
+                    font-size: 30px;
+                    line-height: 50px;
+                    margin-bottom: 60px;
+                }
+            }
+
+            .image2 {
+                display: none;
+            }
+
+        }
+
+    }
+
+    @include media(mobile) {
+        .nav {
+            padding: 0px 20px;
+
+            .list {
+                display: none;
+            }
+
+            .icon {
+                display: block;
+                position: absolute;
+                right: 70px;
+                cursor: pointer;
+            }
+        }
+
+        .dropList {
+            display: none;
+            position: absolute;
+            z-index: 10000;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 30px;
+            margin-top: 50px;
+            transition: all 0.3s ease-in-out;
+
+            .dropLi {
+                list-style: none;
+                margin: 5px 0;
+                font-weight: bold;
+
+
+                a {
+                    text-decoration: none;
+                    color: $main-color;
+                    font-size: 18px;
+                }
+
+            }
+
+            .close {
+                width: 100%;
+                text-align: right;
+
+
+            }
+
+            .closeIcon {
+                margin-right: 35px;
+                margin-top: 15px;
+            }
+
+        }
+
+        .content {
+            padding: 0px 0px;
+
+            .title {
+                width: 80%;
+                padding: 0px 20px;
+
+                h1 {
+                    font-size: 30px;
+                    line-height: 50px;
+                    margin-bottom: 60px;
+                }
+            }
+
+            .image {
+                display: none;
+            }
+
+            .image2 {
+                @include background-image("https://stride-html-template.netlify.app/img/webp/interior11.webp", cover, center);
+                width: 100%;
+                height: 650px;
+                position: absolute;
+                display: block;
+            }
+
+        }
+
+    }
+
+    @include media(xs) {
+        .nav {
+            padding: 0px 20px;
+
+            .list {
+                display: none;
+            }
+
+            .icon {
+                display: block;
+                position: absolute;
+                right: 70px;
+                cursor: pointer;
+            }
+        }
+
+        .dropList {
+            display: none;
+            position: absolute;
+            z-index: 10000;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 30px;
+            margin-top: 50px;
+            transition: all 0.3s ease-in-out;
+
+            .dropLi {
+                list-style: none;
+                margin: 5px 0;
+                font-weight: bold;
+
+
+                a {
+                    text-decoration: none;
+                    color: $main-color;
+                    font-size: 18px;
+                }
+
+            }
+
+            .close {
+                width: 100%;
+                text-align: right;
+
+
+            }
+
+            .closeIcon {
+                margin-right: 35px;
+                margin-top: 15px;
+            }
+
+        }
+
+        .content {
+            padding: 0px 0px;
+
+            .title {
+                width: 80%;
+                padding: 0px 20px;
+
+                h1 {
+                    font-size: 30px;
+                    line-height: 50px;
+                    margin-bottom: 60px;
+                }
+                .btn{
+                    width: 120px;
+                    font-size:15px;
+                }
+            }
+
+            .image {
+                display: none;
+            }
+
+            .image2 {
+                @include background-image("https://stride-html-template.netlify.app/img/webp/interior11.webp", cover, center);
+                width: 100%;
+                height: 650px;
+                position: absolute;
+                display: block;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,235 @@
+@use "../helpers/fonts"as *;
+@use "../helpers/global-root"as *;
+@use "../mixins/media-quary"as *;
+
+.servise {
+    font-family: $bs-font-sans-serif;
+    margin-top: 100px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    .titles {
+        padding: 0px 80px;
+
+        h2 {
+            font-weight: 300;
+            font-size: 40px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 90px;
+        padding: 0px 80px;
+
+        .box {
+            color: black;
+
+            span {
+                font-size: 20px;
+            }
+
+            hr {
+                background: black;
+                margin-bottom: 20px;
+
+            }
+
+            article {
+                font-weight: 500;
+                font-size: 30px;
+            }
+
+            p {
+
+                color: $p-color;
+
+            }
+        }
+
+    }
+
+    @include media(large) {
+        .flex {
+            .box {
+
+                article {
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+
+    @include media(custom976) {
+        .flex {
+            .box {
+
+                article {
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+
+    @include media(medium) {
+        .titles {
+
+            // padding: 0px 50px;
+            h2 {
+
+                width: 80%;
+
+            }
+        }
+
+        .flex {
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0px 0px;
+
+
+
+
+
+            .box {
+                width: 40%;
+                display: inline-block;
+                margin-left: 70px;
+
+                article {
+                    font-weight: 500;
+                    // font-size: 20px;
+
+                }
+            }
+        }
+
+    }
+
+    @include media(custom975) {
+        .titles {
+
+            h2 {
+                width: 70%;
+            }
+        }
+
+        .flex {
+            padding: 0px 10px;
+            display: block;
+            width: 100%;
+
+            .box {
+                width: 80%;
+                display: block;
+
+
+            }
+        }
+
+    }
+
+    @include media(small) {
+        padding: 0px 20px;
+
+        .titles {
+
+            h2 {
+                width: 90%;
+
+            }
+        }
+
+        .flex {
+            padding: 0px 5px;
+            display: block;
+            width: 100%;
+
+            .box {
+                width: 80%;
+                display: block;
+                margin: auto;
+
+
+            }
+        }
+
+    }
+
+
+
+}
+
+@include media(mobile) {
+
+    .servise {
+        margin-top: 600px;
+
+        .titles {
+
+            h2 {
+                width: 100%;
+
+            }
+        }
+
+        .flex {
+            padding: 0px 10px;
+            display: block;
+            width: 100%;
+
+            .box {
+                width: 80%;
+                display: block;
+                margin: auto;
+
+
+            }
+        }
+    }
+
+}
+
+@include media(xs) {
+
+    .servise {
+        margin-top: 680px;
+
+        .titles {
+            padding: 0px;
+
+            h2 {
+                width: 100%;
+                font-size: 30px;
+                padding-left: 10px;
+
+            }
+        }
+
+        .flex {
+            padding: 0px 0px;
+            display: block;
+            width: 90%;
+
+            .box {
+                width: 80%;
+                display: block;
+                margin: auto;
+
+
+            }
+        }
+    }
+
+}

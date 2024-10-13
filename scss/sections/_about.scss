@@ -1,0 +1,300 @@
+@use "../helpers/global-root"as *;
+@use "../mixins/media-quary"as *;
+
+.about {
+    padding: 0;
+    margin: 0;
+    min-height: 500px;
+    background: $about-bg;
+    margin-top: 100px;
+
+    .container {
+        padding: 80px 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+
+        .images {
+            width: 45%;
+
+            .img-1 {
+                width: 450px;
+                box-shadow: 2rem 2rem 3rem rgba(29, 20, 29, .25);
+            }
+
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                gap: 50px;
+
+                padding: 60px 0;
+                padding-left: 60px;
+
+                .img-2 {
+                    width: 180px;
+                    height: 180px;
+                    box-shadow: 2rem 2rem 3rem rgba(29, 20, 29, .25);
+                }
+
+                .img-3 {
+                    width: 220px;
+                    height: 280px;
+                    box-shadow: 2rem 2rem 3rem rgba(29, 20, 29, .25);
+                }
+            }
+        }
+
+        .content {
+            margin-left: 300px;
+            padding-top: 130px;
+
+            hr {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                padding: 0 22px;
+                font-size: 26px;
+                font-weight: 500;
+            }
+
+            article {
+                padding: 0 30px;
+                font-size: 18px;
+                font-weight: 100px;
+                margin-top: 100px;
+                line-height: 25px;
+                color: $p-color;
+            }
+
+        }
+
+        @include media(xl) {
+            .content {
+
+                h2 {
+                    padding: 0 0px;
+                }
+
+                article {
+                    padding: 0 0px;
+                }
+            }
+        }
+
+        @include media(large) {
+            .content {
+                margin-left: 180px;
+
+                h2 {
+                    padding: 0 0px;
+                }
+
+                article {
+                    padding: 0 0px;
+                }
+            }
+        }
+
+        @include media(custom976) {
+            .images {
+
+
+                .img-1 {
+                    width: 400px;
+                    box-shadow: 3rem 3rem 4rem rgba(29, 20, 29, .25);
+                }
+
+                .flex {
+
+
+                    .img-2 {
+                        width: 160px;
+                        height: 160px;
+
+                    }
+
+                    .img-3 {
+                        width: 200px;
+                        height: 200px;
+
+                    }
+                }
+            }
+
+            .content {
+                margin-left: 120px;
+
+                h2 {
+                    padding: 0 0px;
+                }
+
+                article {
+                    padding: 0 0px;
+                }
+            }
+        }
+
+
+    }
+
+    @include media(small) {
+        overflow-x: hidden;
+
+        .container {
+            display: block;
+            padding: 80px 0;
+            margin: 0;
+
+            .images {
+                padding: 0;
+                margin: 0;
+                margin-left: 0;
+                margin: auto;
+
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 0;
+                width: 70%;
+                margin: auto;
+
+                .h2 {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @include media(custom975) {
+        overflow-x: hidden;
+
+        .container {
+            display: block;
+            padding: 80px 0;
+            margin: 0;
+
+            .images {
+                padding: 0;
+                margin: 0;
+                margin: auto;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 0;
+                width: 70%;
+                margin: auto;
+
+                .h2 {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @include media(xs) {
+        overflow-x: hidden;
+
+        .container {
+            display: block;
+            padding: 80px 0;
+            margin: 0;
+
+            .images {
+                padding: 0;
+                margin: 0;
+                margin-left: 50px;
+
+                .img-1 {
+                    width: 350px;
+
+                }
+
+                .flex {
+
+
+                    padding: 60px 0;
+                    padding-left: 60px;
+
+                    .img-2 {
+                        width: 150px;
+                        height: 150px;
+
+                    }
+
+                    .img-3 {
+                        width: 200px;
+                        height: 200px;
+
+                    }
+                }
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 0;
+                width: 70%;
+                margin: auto;
+
+                .h2 {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @include media(mobile) {
+        overflow-x: hidden;
+
+        .container {
+            display: block;
+            padding: 80px 0;
+            margin: 0;
+
+            .images {
+                padding: 0;
+                margin: 0;
+                margin-left: 50px;
+
+                .img-1 {
+                    width: 350px;
+
+                }
+
+                .flex {
+
+
+                    padding: 60px 0;
+                    padding-left: 60px;
+
+                    .img-2 {
+                        width: 150px;
+                        height: 150px;
+
+                    }
+
+                    .img-3 {
+                        width: 200px;
+                        height: 200px;
+
+                    }
+                }
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 0;
+                width: 70%;
+                margin: auto;
+
+                .h2 {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+
+}

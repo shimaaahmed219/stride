@@ -1,0 +1,84 @@
+@use "../helpers/global-root"as *;
+@use "../mixins/media-quary"as *;
+
+.work {
+    padding: 30px 0;
+    margin: 0;
+    background: $work-bg;
+    width: 100%;
+    min-height: 500px;
+    color: white;
+
+
+    h6 {
+        color: $text;
+        font-size: 22px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    p {
+        width: 70%;
+        margin: auto;
+        font-size: 42px;
+        text-align: center;
+        font-weight: 300;
+        margin-top: -30px;
+        line-height: 50px;
+    }
+
+    .coBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+
+        .workBtn {
+            width: 200px;
+            padding: 20px 0;
+            font-size: 20px;
+            background: $workBtn;
+            border: none;
+
+        }
+    }
+
+    @include media(large){
+        p {
+            width: 70%;
+            font-size: 39px;
+        }
+    }
+    @include media(custom976 ){
+        p {
+            width: 70%;
+            font-size: 39px;
+        }
+    }
+    @include media(custom975 ){
+        p {
+            width: 70%;
+            font-size: 39px;
+        }
+    }
+    @include media(small){
+        p {
+            width: 70%;
+            font-size: 39px;
+        }
+    }
+    @include media(mobile){
+        p {
+            width: 80%;
+            font-size: 39px;
+        }
+    }
+    @include media(xs){
+        p {
+            width: 90%;
+            font-size: 20px;
+        }
+    }
+
+
+}

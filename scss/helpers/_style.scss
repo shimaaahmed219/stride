@@ -1,0 +1,25 @@
+
+@use "./global-root"  as *;
+
+
+
+%flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+%span{
+    display: block;
+    font-size: 80px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color:black;
+}
+
+%p{
+line-height: 22px;
+font-size: 18px;
+color:$p-color;
+}

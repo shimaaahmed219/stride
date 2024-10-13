@@ -1,0 +1,212 @@
+@use "../helpers/style"as *;
+@use "../mixins/media-quary"as *;
+
+.numbers {
+    padding: 0;
+    margin: 0;
+    min-height: 500px;
+    margin-top: 100px;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 100px;
+        gap: 80px;
+        justify-content: center;
+        align-items: center;
+
+        .part-1 {
+            padding: 0px 60px;
+            height: 100px;
+
+            hr {
+                margin-bottom: 50px;
+                background: black;
+
+            }
+
+            .num-title {
+                font-size: 28px;
+                font-weight: 400;
+            }
+        }
+
+        .num-des {
+            .num-header {
+                font-size: 42px;
+                font-weight: 300;
+            }
+
+            .num-flex {
+                display: flex;
+                gap: 30px;
+
+                .par-1 {
+                    @extend %p;
+
+                    span {
+                        @extend %span;
+
+                    }
+
+
+
+                }
+
+                .par-2 {
+                    @extend %p;
+
+                    span {
+                        @extend %span;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    @include media(large) {
+
+        .container {
+
+            .part-1 {
+                padding: 0px 20px;
+            }
+        }
+    }
+
+    @include media(custom976) {
+        .container {
+
+            .part-1 {
+                padding: 0px 20px;
+            }
+        }
+    }
+
+    @include media(custom975) {
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            .part-1 {
+                padding: 0px 20px;
+                width: 100%;
+                text-align: center;
+
+            }
+        }
+    }
+
+    @include media(small) {
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            .part-1 {
+                padding: 0px 20px;
+                width: 100%;
+                text-align: center;
+
+            }
+
+        }
+    }
+
+    @include media(mobile) {
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            .part-1 {
+                padding: 0px 20px;
+                width: 100%;
+                text-align: center;
+
+            }
+
+            .num-des {
+                .num-header {
+                    font-size: 30px;
+                    font-weight: 300;
+                }
+
+                .num-flex {
+                    display: flex;
+                    gap: 30px;
+
+                    .par-1 {
+
+                        span {
+
+                            font-size: 20px;
+
+                        }
+
+
+
+                    }
+
+                    .par-2 {
+
+
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    @include media(xs) {
+        .container {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .part-1 {
+                padding: 0px 20px;
+                width: 100%;
+                text-align: center;
+
+            }
+
+            .num-des {
+                .num-header {
+                    font-size: 30px;
+                    font-weight: 300;
+                }
+
+                .num-flex {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .par-1 {
+
+                        span {
+
+                            font-size: 20px;
+
+                        }
+
+
+
+                    }
+
+                    .par-2 {
+
+
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

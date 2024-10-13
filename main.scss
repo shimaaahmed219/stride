@@ -1,0 +1,21 @@
+@use "./scss/helpers/global-root"as *;
+@use "./scss/sections/header" as *;
+@use"./scss/sections/service" as *;
+@use "./scss/sections/about" as *;
+@use "./scss/sections/numbers" as *;
+@use "./scss/sections/work" as *;
+@use "./scss/sections/footer" as *;
+@use "./scss/helpers/fonts" as *;
+
+
+body {
+    background-color: $bs-body-color;
+    font-family: $bs-font-sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    height: 1000px
+
+}
+
